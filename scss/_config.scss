@@ -1,0 +1,35 @@
+$dark-blue: #2748B3;
+$black: #000;
+$radial: radial-gradient(#fff, rgba(255, 255, 255, 0.2) 2px, transparent 40px), radial-gradient(#fff, rgba(255, 255, 255, 0.15) 1px, transparent 30px), radial-gradient(#fff, rgba(255, 255, 255, 0.1) 2px, transparent 40px), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 30px);
+$light-blue: #6B8EFF;
+
+@mixin border($color) {
+  border: 1px solid $color; 
+}
+
+@mixin shadow {
+  -webkit-box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
+  box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);  
+}
+
+%announcement {
+  @include border(#ccc);
+  padding: 10px;
+  color: $dark-blue;
+  width: 100%;
+}
+
+@mixin padding($em) {
+  padding: $em * 1em ; 
+}
+
+@mixin code-float($float) {
+  float: $float;
+  width: 40%
+}
+
+@mixin header {
+  text-align: center;
+  color: #6B8EFF;  
+}
