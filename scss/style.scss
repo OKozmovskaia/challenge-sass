@@ -1,4 +1,6 @@
-@import 'config';
+@use 'config';
+@use 'function'
+// @use 'config-for-red' as r
 
 body {
   font: 100% "Space Mono", monospace;
@@ -15,6 +17,11 @@ body {
 article {
   display: flex;
   flex-wrap: wrap;
+
+    #links {
+      display: inline-block;
+      text-align: center;
+    }
 
     section {
       flex-grow: 1;
@@ -44,7 +51,7 @@ article {
       margin-bottom: 1.6em;
       max-width: 100%;
       overflow: auto;
-      padding: 1em 1.5em;
+      @include padding(1.5);
       display: block;
       word-wrap: break-word;
 
@@ -58,6 +65,28 @@ article {
     }
 
 }
+
+.btn {
+  @extend %btn;
+  &-red {
+    background-color: red;
+  
+  &-green {
+    background-color: green;
+    
+    // &:visited {
+    //   $dark-blue: change-text-color-green();
+    // }
+  }
+}
+
+// #link-red:active {
+//   // @use 'config' with {
+//   $dark-blue: change-text-color-red();
+//   font-size: 5rem;
+//   }
+// }
+
 
 h1, h2, h6 {
   @include header;
@@ -91,4 +120,7 @@ h6 {
 .warning {
   background-color: orange
 }
+
+
+
 

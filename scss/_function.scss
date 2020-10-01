@@ -1,0 +1,8 @@
+@function change-text-color-red($color) {
+    $color: red ;
+    @return $dark-blue: $color !default;
+}
+
+@function change-text-color-green() {
+  $dark-blue: green;
+}

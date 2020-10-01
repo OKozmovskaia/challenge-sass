@@ -8,6 +8,16 @@
   width: 100%;
 }
 
+.btn {
+  display: inline-block;
+  text-align: center;
+  padding: 0.7em;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #000;
+}
+
 body {
   font: 100% "Space Mono", monospace;
   color: #2748B3;
@@ -26,6 +36,11 @@ article {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+article #links {
+  display: inline-block;
+  text-align: center;
 }
 
 article section {
@@ -64,7 +79,7 @@ article code {
   margin-bottom: 1.6em;
   max-width: 100%;
   overflow: auto;
-  padding: 1em 1.5em;
+  padding: 1.5em;
   display: block;
   word-wrap: break-word;
 }
@@ -77,6 +92,18 @@ article code .before {
 article code .after {
   float: right;
   width: 40%;
+}
+
+.btn-red {
+  background-color: red;
+}
+
+.btn-red:target {
+  @use 'config' with {}
+}
+
+.btn-green {
+  background-color: green;
 }
 
 h1, h2, h6 {
